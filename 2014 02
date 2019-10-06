@@ -1,0 +1,35 @@
+#include<iostream>
+#include<stdlib.h>
+
+using namespace std;
+
+int main(){
+	int t;
+	cin >> t;
+	if(t>=0){	
+		if(t>=0&&t<=10)
+		{
+			cout << "50元";
+		}
+		if(t>10&&t<=100)
+		{
+			cout << 6*(t-10)+50 << "元"; 
+		}
+		if(t>100&&t<=200)
+		{
+			cout << 4*(t-100)+590 << "元"; //100 =590
+		}
+		if(t>200&&t<=500)
+		{
+			cout << 3*(t-200)+990 << "元"; 	//200 = 990
+		} 
+		if(t>500)
+		{
+			cout << 2*(t-500)+1890 << "元";	//500=1890
+		}
+	cout << endl ;
+	}
+	
+	system("PAUSE");
+	return 0;
+}
