@@ -24,3 +24,23 @@ int main() {
 	system("PAUSE");
 	return 0;
 }
+
+
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim n As Integer
+        n = Val(TextBox2.Text)
+        If (n >= 1 And n <= 20) Then
+            re(n)
+        Else
+            TextBox1.Text = "輸入不符"
+        End If
+    End Sub
+    Public Function re(ByRef n As Integer) As Integer
+        If (n >= 3) Then
+            Return 3 * re(n - 1) - re(n - 2)
+        Else
+            Return (2 * n + 1)
+        End If
+    End Function
+End Class
